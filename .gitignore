@@ -1,0 +1,5 @@
+# For obvious security reasons, any credentials, API keys, passwords,
+# etc., must be saved locally in various ways/files and ignored by git.
+
+*.env
+secrets/*
