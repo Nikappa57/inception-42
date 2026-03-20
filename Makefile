@@ -3,8 +3,8 @@ NAME = inception
 DOCKER_COMPOSE = docker compose -f srcs/docker-compose.yml
 
 all:
-	@mkdir -p /home/lorenzo/data/mariadb
-	@mkdir -p /home/lorenzo/data/wordpress
+	@mkdir -p /home/lgaudino/data/mariadb
+	@mkdir -p /home/lgaudino/data/wordpress
 	$(DOCKER_COMPOSE) up --build
 
 stop:
@@ -21,8 +21,8 @@ clean: down
 
 fclean:
 	$(DOCKER_COMPOSE) down -v
-	sudo rm -rf /home/lorenzo/data/mariadb/*
-	sudo rm -rf /home/lorenzo/data/wordpress/*
+	sudo rm -rf /home/lgaudino/data/mariadb/*
+	sudo rm -rf /home/lgaudino/data/wordpress/*
 	docker system prune -af
 
 re: fclean all
